@@ -108,6 +108,29 @@
                             </resources>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>copy Vue.js to target</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.parent.basedir}/springboot-backend-application/target/classes/public</outputDirectory>
+                            <overwrite>true</overwrite>
+                            <resources>
+                                <resource>
+                                    <directory>dist</directory>
+                                    <includes>
+                                        <include>css/</include>
+                                        <include>img/</include>
+                                        <include>js/</include>
+                                        <include>favicon.ico</include>
+                                        <include>index.html</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>

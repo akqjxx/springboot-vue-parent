@@ -26,7 +26,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springboot-vue-ui-application</artifactId>
+    <artifactId>springboot-tabbar-application</artifactId>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,7 +40,7 @@
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
     </dependencies>
-<!--
+
     <build>
         <plugins>
             <plugin>
@@ -57,20 +57,20 @@
                             <nodeVersion>v12.15.0</nodeVersion>
                         </configuration>
                     </execution>
-                    &lt;!&ndash; Install all project dependencies &ndash;&gt;
+                    <!-- Install all project dependencies -->
                     <execution>
                         <id>npm install</id>
                         <goals>
                             <goal>npm</goal>
                         </goals>
-                        &lt;!&ndash; optional: default phase is "generate-resources" &ndash;&gt;
+                        <!-- optional: default phase is "generate-resources" -->
                         <phase>generate-resources</phase>
-                        &lt;!&ndash; Optional configuration which provides for running any npm command &ndash;&gt;
+                        <!-- Optional configuration which provides for running any npm command -->
                         <configuration>
                             <arguments>install</arguments>
                         </configuration>
                     </execution>
-                    &lt;!&ndash; Build and minify static files &ndash;&gt;
+                    <!-- Build and minify static files -->
                     <execution>
                         <id>npm run build</id>
                         <goals>
@@ -134,5 +134,5 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>-->
+    </build>
 </project>

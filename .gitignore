@@ -25,3 +25,4 @@ springboot-backend-application/src/test/
 springboot-backend-application/target/
 springboot-vue-ui-application.iml
 springboot-vue-ui-application/target/
+springboot-backend-application/src/main/resources/public

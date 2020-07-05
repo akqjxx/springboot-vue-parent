@@ -11,6 +11,7 @@
     <modules>
         <module>springboot-backend-application</module>
         <module>springboot-vue-ui-application</module>
+        <module>springboot-tabbar-application</module>
     </modules>
 
     <properties>

@@ -18,18 +18,28 @@ const routes = [
     {
         path: '/home',
         name: 'Home',
+        meta:{
+            title:"主页"
+        },
         // component: Home,
         component: () => import("../components/Home"),
         children: [
             {
-              path:"",
-              redirect: "news"
+                path: "",
+                redirect: "news"
             },
             {
                 path: "news",
+                meta:{
+                    title:"新闻"
+                },
                 component: () => import("../components/HomeNews"),
-            }, {
+            },
+            {
                 path: "message",
+                meta:{
+                    title:"消息"
+                },
                 component: () => import("../components/HomeMessage"),
             }
         ]
@@ -37,11 +47,27 @@ const routes = [
     {
         path: '/about',
         name: 'About',
+        meta:{
+            title:"关于"
+        },
         component: () => import("../components/About"),
+    },
+    {
+        path: '/profile',
+        name: 'About',
+        meta:{
+            title:"个人档案"
+        },
+        component: () => import("../components/Profile"),
     }
 ];
-export default new Router({
-  //  mode: 'history',
+const router  = new Router({
+    //  mode: 'history',
     routes,
     linkActiveClass: "active"
-})
+});
+router.beforeEach((to,from,next)=>{
+  next();
+  document.title = to.matched[0].meta.title;
+});
+export default   router;

@@ -40,7 +40,7 @@
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
     </dependencies>
-
+<!--
     <build>
         <plugins>
             <plugin>
@@ -57,20 +57,20 @@
                             <nodeVersion>v12.15.0</nodeVersion>
                         </configuration>
                     </execution>
-                    <!-- Install all project dependencies -->
+                    &lt;!&ndash; Install all project dependencies &ndash;&gt;
                     <execution>
                         <id>npm install</id>
                         <goals>
                             <goal>npm</goal>
                         </goals>
-                        <!-- optional: default phase is "generate-resources" -->
+                        &lt;!&ndash; optional: default phase is "generate-resources" &ndash;&gt;
                         <phase>generate-resources</phase>
-                        <!-- Optional configuration which provides for running any npm command -->
+                        &lt;!&ndash; Optional configuration which provides for running any npm command &ndash;&gt;
                         <configuration>
                             <arguments>install</arguments>
                         </configuration>
                     </execution>
-                    <!-- Build and minify static files -->
+                    &lt;!&ndash; Build and minify static files &ndash;&gt;
                     <execution>
                         <id>npm run build</id>
                         <goals>
@@ -134,5 +134,5 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 </project>
